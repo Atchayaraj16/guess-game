@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess the Number</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      width: 100px;
+      font-size: 16px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px;
+    }
+
+    #s {
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Guess the Number (1-10)</h1>
+  <input id="num" type="number" min="1" max="10" placeholder="Enter number">
+  <button onclick="check()">Check</button>
+
+  <p id="a">You are wrong/right</p>
+  <p id="s">Score: 10</p>
+
+  <script>
+    var n = document.getElementById("num");
+    var p = document.getElementById("a");
+    var h = document.getElementById("s");
+    var randomnumber = Math.floor(Math.random() * 10) + 1;
+    var score = 10;
+
+    function resetGame() {
+      score = 10;
+      randomnumber = Math.floor(Math.random() * 10) + 1;
+      h.textContent = "Score: " + score;
+      p.textContent = "You are wrong/right";
+      n.value = "";
+    }
+
+    function check() {
+      var enterednumber = Number(n.value);
+
+      if (enterednumber === randomnumber) {
+        p.textContent = "🎉 You are right!";
+        alert("You won!");
+        resetGame();
+      } else {
+        score--;
+        h.textContent = "Score: " + score;
+        p.textContent = "❌ You are wrong!";
+        if (score === 0) {
+          alert("Game over! Try again.");
+          resetGame();
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
