@@ -15,3 +15,5 @@ A simple web-based "Guess the Number" game using HTML, CSS, and JavaScript. The 
 - JavaScript
 
 ## 📸 Screenshots
+![Screenshot 2025-06-27 222933](https://github.com/user-attachments/assets/3d3bc2a9-315e-419e-8e28-1b6b3954f814)
+
