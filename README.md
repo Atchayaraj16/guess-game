@@ -2,7 +2,7 @@ A simple web-based "Guess the Number" game using HTML, CSS, and JavaScript. The 
 
 ##  Features
 
-- Random number generation between 1 and 100
+- Random number generation between 1 and 10
 - Score tracking
 - "Try Again" button when score reaches 0
 - Stylish UI with responsive layout
